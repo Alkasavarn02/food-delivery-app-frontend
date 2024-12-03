@@ -1,16 +1,28 @@
-import { memo, useContext } from "react";
+import { memo, useContext, useEffect } from "react";
 import styles from "./header.module.css";
 import StarIcon from "../../assets/star.png";
 import LocationIcon from "../../assets/Location.png";
 import MyCartImage from "../../assets/mycart.png";
 import OrderLogo from "../../assets/LOGO.png";
 import Menu from "../../assets/Menu.png"
+import { getUser } from "../../services/api";
 import { AppContext } from "../../Context/appcontext";
+import { useNavigate } from "react-router-dom";
 
-const Header = ({onHandleMyCart}) => {
+const Header = ({onHandleMyCart,screen}) => {
 
-    const {userInfo} = useContext(AppContext)
+    const {userInfo,setUserInfo} = useContext(AppContext);
 
+    useEffect(()=>{
+        getUser()
+        .then((res)=>{
+            setUserInfo(res?.data?.data)
+        })
+    },[])
+
+    const navigate = useNavigate()
+
+    const currentAddress = userInfo?.address?.[userInfo?.address.length - 1]
 
     return (
         <div className={`d-flex flex-column ${styles['header-section']}` }>
@@ -28,10 +40,10 @@ const Header = ({onHandleMyCart}) => {
                         <img src={LocationIcon} alt="location-Icon" />
                     </div>
                     <p>
-                        {"currentAddress"}<span className={styles['change-location-text']}>Change Location</span>
+                        {currentAddress?.fullAddress}<span className={styles['change-location-text']}>Change Location</span>
                     </p>
                 </div>
-                <div className={styles['mycart-img']} style={{cursor:"pointer"}} onClick={onHandleMyCart} >
+                <div className={styles['mycart-img']} style={{cursor:"pointer"}} onClick={()=>navigate("/checkoutpage")} >
                     <img src={MyCartImage} alt="My Cart Section" />
                 </div>
             </div>

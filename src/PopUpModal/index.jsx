@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./modal.module.css";
 import CustomButton from "../Components/ButtonComponent";
 import AddAddressIcon from "../assets/AddAddress.png"

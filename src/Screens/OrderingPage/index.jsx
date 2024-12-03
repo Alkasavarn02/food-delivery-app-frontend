@@ -21,12 +21,21 @@ const screens = {
 
 const OrderingPage = ({screen,title}) => {
 
+    const {userInfo,setUserInfo} = useContext(AppContext);
+
+    useEffect(()=>{
+        getUser()
+        .then((res)=>{
+            setUserInfo(res?.data?.data)
+        })
+    },[])
+
     return (
         <div className={`d-flex flex-column ${styles['order-page']}`}>
             <div className={`d-flex flex-column ${styles['main-section']}`}>
                 <div className={`d-flex flex-column ${styles['main-screen-section']}`}>
                     <Header/>
-                    <NavBar/>
+                    <NavBar userInfo={userInfo}/>
                     <div className={`d-flex align-center ${styles['title-section']}`}>
                         <div className={styles['backArrowImg']}>
                             <img src={leftarrow} alt="leftArrow" />
@@ -34,7 +43,7 @@ const OrderingPage = ({screen,title}) => {
                         <p className={styles['title-text']}>{title}</p>
                     </div>
                     {
-                        screen ? screens[screen] : <CheckOut/>
+                        screen ? screens[screen] : <CheckOut userInfo={userInfo}/>
                     }
                 </div>
             </div>

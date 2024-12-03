@@ -94,14 +94,6 @@ const ProductPage = ({screen}) => {
         })
     },[])
 
-    
-    const onHandleMyCart = () => {
-        if(userInfo?.cart.length > 0){
-            setShowCart(true)
-        } else {
-            setShowCart(false)
-        }
-    }
 
     const category = []
     restaurantType[0]?.products?.map((product)=>{
@@ -150,8 +142,8 @@ const ProductPage = ({screen}) => {
     return (
         <div className={`d-flex flex-column ${styles['product-page']}`}>
             <div className={`d-flex flex-column ${styles['section-1']}`}>
-                <Header onHandleMyCart={onHandleMyCart}/>
-                <NavBar screen={screen}/>
+                <Header/>
+                <NavBar screen={screen} userInfo={userInfo}/>
                 <div className={`d-flex ${styles['banner-container']}`}>
                     <div className={`d-flex flex-column ${styles['banner-left-section']}`}>
                         <p className={styles['para-1']}>I'm lovin' it!</p>

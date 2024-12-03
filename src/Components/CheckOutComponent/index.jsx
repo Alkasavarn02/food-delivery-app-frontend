@@ -6,24 +6,15 @@ import Line from "../lineComponent";
 import CustomButton from "../ButtonComponent";
 import ImageAndLabelComponent from "../ImageAndLabelComponent";
 import { CompanyImg } from "../../Constants/company";
-import { useEffect, useState } from "react";
-import { getUser } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-const CheckOut = () => {
+const CheckOut = ({userInfo={}}) => {
+
+    console.log("checkout",userInfo)
 
     const navigate = useNavigate()
 
-    const [userData,setUserData] = useState({}) 
-
-    useEffect(()=>{
-        getUser()
-        .then((res)=>{
-            setUserData(res?.data?.data)
-        })
-    },[])
-
-    const totalPrice = userData?.cart?.reduce((acc,cum) => {
+    const totalPrice = userInfo?.cart?.reduce((acc,cum) => {
         return acc + Number(cum?.price)
     },0)
 
@@ -33,12 +24,13 @@ const CheckOut = () => {
         },500)
     }
 
+    const currentAddress = userInfo?.address?.[userInfo?.address?.length - 1]
 
     return (
         <div className={`d-flex flex-column ${styles['checkout-page']}`}>
             <div className={`d-flex ${styles['section-1']}`}>
                 <div className={styles['left-section']}>
-                    <CheckOutItem itemList={userData?.cart}/>
+                    <CheckOutItem itemList={userInfo?.cart}/>
                 </div>
                 <div className={`d-flex flex-column ${styles['right-section']}`}>
                     <div className={`d-flex align-center ${styles['delivery-section']}`}>
@@ -48,7 +40,7 @@ const CheckOut = () => {
                             </div>
                             <div className={`d-flex flex-column ${styles['delivery-text']}`}>
                                 <p className={styles['delivery-text']}>Delivery Address</p>
-                                <p className={styles['delivery-address-text']}>45, Green Street, Sector 12...</p>
+                                <p className={styles['delivery-address-text']}>{currentAddress?.fullAddress}</p>
                             </div>
                         </div>
                         <div className={`d-flex ${styles['right-arrow-img']}`} onClick={onHandleClick}>
@@ -66,7 +58,7 @@ const CheckOut = () => {
                     </div>
                     <Line classes={`${styles['line']}`}/>
                     <div className={`d-flex ${styles['total-list']}`}>
-                        <p>Subtotal ({userData?.cart?.length} items)</p>
+                        <p>Subtotal ({userInfo?.cart?.length} items)</p>
                         <p className={styles['total']}>₹{totalPrice+10}</p>
                     </div>
                     <CustomButton title={"Choose Payment Method"} classes={`${styles['btn']}`} onClick={()=>{

@@ -24,16 +24,9 @@ const navBarItems = [
     },
 ]
 
-const NavBar = ({screen}) => {
-    console.log(screen)
+const NavBar = ({screen ,userInfo}) => {
 
-    const [user,setUser] = useState('');
     const navigate = useNavigate()
-
-    useEffect(()=>{
-        const userData = JSON.parse(localStorage.getItem("user"))
-        setUser(userData?.userName)
-    },[])
 
     const onLoginSignUp = ()=>{
         setTimeout(()=>{
@@ -57,9 +50,9 @@ const NavBar = ({screen}) => {
                     <img src={userIcon} alt="userIcon" />
                 </div>
                 <p
-                    onClick={user ? () => navigate("/profilepage") : onLoginSignUp}
+                    onClick={userInfo ? () => navigate("/profilepage") : onLoginSignUp}
                     style={{cursor: "pointer"}}
-                >{ user? `Hey ${user}` : 'Login/Signup'}</p>
+                >{ userInfo ? `Hey ${userInfo?.userName}` : 'Login/Signup'}</p>
             </div>
         </div>
     )

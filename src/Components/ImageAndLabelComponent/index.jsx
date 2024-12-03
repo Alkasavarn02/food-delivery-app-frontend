@@ -40,7 +40,13 @@ const ImageAndLabel = ({label1, label2, labelList, imgList, classes, popupClasse
                 {
                     imgList?.map((img)=>{
                         return (
-                            <div key={img?.id} className={`${styles['each-img-section']} ${classes || ''}`} onClick={()=>onClick(img)}>
+                            <div 
+                                key={img?.id}
+                                className={`${styles['each-img-section']} 
+                                ${classes || ''}`} 
+                                onClick={()=>onClick(img)}
+                                style={{cursor: img?.name === "Restaurant" ? "pointer" : null}}
+                            >
                                 <div className={`${imgContainer ? imgContainer :styles['img-container']}`} key={img?.id}>
                                     <img src={img?.label} alt="restaurantImg" />
                                     {

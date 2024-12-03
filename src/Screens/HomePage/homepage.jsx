@@ -102,7 +102,7 @@ const labelList2 = [
 
 const HomePage = ({screen}) => {
 
-    const {setUserInfo} = useContext(AppContext);
+    const {userInfo,setUserInfo} = useContext(AppContext);
 
     useEffect(()=>{
         getUser()
@@ -114,12 +114,11 @@ const HomePage = ({screen}) => {
         })
     },[])
 
-
     return (
         <div className={`${styles['homepage']}`}>
             <div className={`d-flex flex-column ${styles['homepage-section']}`}>
                 <Header/>
-                <NavBar screen={screen}/>
+                <NavBar screen={screen} userInfo={userInfo}/>
                 <div className={`d-flex ${styles['banner-img']}`}>
                     <div className={`d-flex flex-column align-center justify-center ${styles['left-section']}`}>
                         <div className={`${styles['left-section-text']}`}>
