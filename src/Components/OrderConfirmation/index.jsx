@@ -3,7 +3,7 @@ import placedIcon from "../../assets/PlacedIcon.png"
 import CustomButton from "../ButtonComponent";
 import { useContext, useEffect } from "react";
 import { AppContext } from "../../Context/appcontext";
-import { getUser } from "../../services/api";
+import { deleteCartItems, getUser } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
 const OrderConfirmation = () => {
@@ -18,6 +18,14 @@ const OrderConfirmation = () => {
             setUserInfo(res?.data?.data)
         ))
     },[])
+
+    const oncheckOut = ()=>{
+        deleteCartItems()
+        .then((res)=>{
+            setUserInfo(res?.data?.data)
+            navigate("/homepage")
+        })
+    }
 
     return (
         <div className={`d-flex flex-column align-center justify-center ${styles['order-container']}`}>
@@ -36,7 +44,7 @@ const OrderConfirmation = () => {
                         )
                     })
                 }
-                <CustomButton title={"Back to Home"} classes={`${styles['btn']}`} onClick={()=>navigate("/homepage")}/>
+                <CustomButton title={"Back to Home"} classes={`${styles['btn']}`} onClick={oncheckOut}/>
             </div>
         </div>
     );
