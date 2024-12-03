@@ -2,7 +2,7 @@ import styles from './Basket.module.css'; // CSS module for styling
 import CustomButton from '../ButtonComponent';
 import Share from "../../assets/share.png";
 import BasketImg from "../../assets/Basket.png";
-import remove from "../../assets/remove.png";
+import remove from "../../assets/Remove.png";
 import forwardButton1 from "../../assets/ForwardButton1.png"
 import forwardButton from "../../assets/ForwardButton.png"
 import forwardButton3 from "../../assets/ForwardButton3.png"
