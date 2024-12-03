@@ -1,7 +1,7 @@
 import facebookIcon from "../assets/Facebook.png";
 import InstagramIcon from "../assets/Instagram.png";
 import TikTokIcon from "../assets/TikTok.png";
-import SnapChatIcon from "../assets/SnapChat.png";
+import SnapChatIcon from "../assets/Snapchat.png";
 
 export const ImageIconType = [
     {
