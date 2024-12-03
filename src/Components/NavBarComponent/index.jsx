@@ -25,6 +25,7 @@ const navBarItems = [
 ]
 
 const NavBar = ({screen}) => {
+    console.log(screen)
 
     const [user,setUser] = useState('');
     const navigate = useNavigate()
@@ -48,7 +49,7 @@ const NavBar = ({screen}) => {
             <p className={screen === "home" ? styles['home-btn'] : null }>Home</p>
             {
                 navBarItems?.map((item)=>{
-                    return <p key={item?.id} className={screen === "restaurants" ? styles[item?.classes] :null}>{item?.title}</p>
+                    return <p key={item?.id} className={screen === "restaurant" ? styles[item?.classes] :null}>{item?.title}</p>
                 })
             }
             <div className={`d-flex justify-center align-center ${styles['login-signup-text']}`}>

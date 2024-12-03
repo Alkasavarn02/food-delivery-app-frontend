@@ -73,7 +73,7 @@ const Basket = () => {
                         uniqueProducts && 
                         uniqueProducts?.map((eachdata)=>{
                             return (
-                                <div className={`d-flex align-center ${styles['cart-items']}`} key={eachdata?._id}>
+                                <div className={`d-flex align-center ${styles['cart-items']}`} key={eachdata?.id}>
                                     <div className={`d-flex align-center ${styles['itemPrice-info']}`}>
                                         <p className={`d-flex justify-center align-center ${styles['item-quantity']}`}>{eachdata?.quantity}x</p>
                                         <div className={styles['item-decription']}>

@@ -69,7 +69,7 @@ const navlist = [
     },
 ]                              
 
-const ProductPage = () => {
+const ProductPage = ({screen}) => {
     
     const [restaurantType,setRestaurantType] = useState({})
 
@@ -151,7 +151,7 @@ const ProductPage = () => {
         <div className={`d-flex flex-column ${styles['product-page']}`}>
             <div className={`d-flex flex-column ${styles['section-1']}`}>
                 <Header onHandleMyCart={onHandleMyCart}/>
-                <NavBar/>
+                <NavBar screen={screen}/>
                 <div className={`d-flex ${styles['banner-container']}`}>
                     <div className={`d-flex flex-column ${styles['banner-left-section']}`}>
                         <p className={styles['para-1']}>I'm lovin' it!</p>

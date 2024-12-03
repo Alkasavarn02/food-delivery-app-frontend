@@ -10,7 +10,6 @@ import { AppContext } from "../../Context/appcontext";
 const Header = ({onHandleMyCart}) => {
 
     const {userInfo} = useContext(AppContext)
-    console.log("header",userInfo)
 
 
     return (
