@@ -1,7 +1,7 @@
 import { memo, useContext } from "react";
 import styles from "./header.module.css";
 import StarIcon from "../../assets/star.png";
-import LocationIcon from "../../assets/location.png";
+import LocationIcon from "../../assets/Location.png";
 import MyCartImage from "../../assets/mycart.png";
 import OrderLogo from "../../assets/LOGO.png";
 import Menu from "../../assets/Menu.png"
