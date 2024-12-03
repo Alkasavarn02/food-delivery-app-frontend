@@ -28,6 +28,9 @@ const OrderingPage = ({screen,title}) => {
         .then((res)=>{
             setUserInfo(res?.data?.data)
         })
+        .catch((err)=>{
+            alert('you have to login first to proceed further')
+        })
     },[])
 
     return (

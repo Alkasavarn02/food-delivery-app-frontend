@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo } from "react";
 import styles from "./navbar.module.css";
 import orderLogo from "../../assets/LOGO.png";
 import userIcon from "../../assets/User.png";
@@ -51,7 +51,7 @@ const NavBar = ({screen ,userInfo}) => {
                     <img src={userIcon} alt="userIcon" />
                 </div>
                 <p
-                    onClick={userInfo ? () => navigate("/profilepage") : onLoginSignUp}
+                    onClick={userInfo?.userName?.trim() ? () => navigate("/profilepage") : onLoginSignUp}
                     style={{cursor: "pointer"}}
                 >{ userInfo && userInfo?.userName?.trim() ? `Hey ${userInfo?.userName}` : 'Login/Signup'}</p>
             </div>

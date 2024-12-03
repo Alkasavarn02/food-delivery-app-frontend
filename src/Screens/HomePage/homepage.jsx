@@ -110,7 +110,7 @@ const HomePage = ({screen}) => {
             setUserInfo(res?.data?.data)
         })
         .catch((err)=>{
-            console.log(err)
+            alert('you have to login first to proceed further')
         })
     },[])
 
