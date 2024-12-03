@@ -33,6 +33,7 @@ const NavBar = ({screen ,userInfo}) => {
             navigate("/login")
         },1000)
     }
+    console.log(userInfo)
 
     return (
         <div className={`d-flex justify-between align-center ${styles['nav-bar']}`}>
@@ -52,7 +53,7 @@ const NavBar = ({screen ,userInfo}) => {
                 <p
                     onClick={userInfo ? () => navigate("/profilepage") : onLoginSignUp}
                     style={{cursor: "pointer"}}
-                >{ userInfo ? `Hey ${userInfo?.userName}` : 'Login/Signup'}</p>
+                >{ userInfo && userInfo?.userName?.trim() ? `Hey ${userInfo?.userName}` : 'Login/Signup'}</p>
             </div>
         </div>
     )

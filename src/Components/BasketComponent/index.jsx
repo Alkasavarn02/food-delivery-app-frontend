@@ -50,6 +50,18 @@ const Basket = () => {
 
     const uniqueProducts = Object.values(productCount);
 
+    const handleCopyLink = () => {
+        const checkoutURL = `${window.location.origin}/checkoutpage`;
+        navigator.clipboard
+            .writeText(checkoutURL)
+            .then(() => {
+                alert("Checkout link copied to clipboard!");
+            })
+            .catch((err) => {
+                console.error("Failed to copy link: ", err);
+            });
+    };
+
     return (
         <div className={`d-flex flex-column ${styles.basket}`}>
             <div className={`d-flex align-center ${styles['share-section']}`}>
@@ -59,7 +71,7 @@ const Basket = () => {
                 <p>
                     Share this cart with your friends
                 </p>
-                <CustomButton title={"Copy Link"} classes={`${styles['copy-link']}`}/>
+                <CustomButton title={"Copy Link"} classes={`${styles['copy-link']}`} onClick={handleCopyLink}/>
             </div>
             <div className={styles['cart-section']}>
                 <div className={`d-flex align-center justify-center ${styles['cart-header']}`}>
