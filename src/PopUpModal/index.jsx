@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./modal.module.css";
 import CustomButton from "../Components/ButtonComponent";
 import AddAddressIcon from "../assets/AddAddress.png"
@@ -25,24 +25,23 @@ const addAddressInputField = [
     },
 ]
 
-const PopUpModal = ({setShowModal}) => {
+const PopUpModal = ({setShowModal,setUserData}) => {
 
     const [addressData,setAddressData] = useState({})
-    const [userInfo,setUserInfo] = useState({})
 
     const onSave = (e) => {
         e.preventDefault();
         addAddress(addressData)
-        .then((res) => {
-            setShowModal(false);
-            return getUser();
+        .then((res)=>{
+            setShowModal(false)
+            return getUser()
         })
-        .then((res) => {
-            setUserInfo(res?.data?.data);
+        .then((res)=>{
+            setUserData(res?.data?.data)
         })
-        .catch((err) => {
-            console.log("Error adding address:", err);
-        });
+        .catch((err)=>{
+            alert(err?.response?.data?.message)
+        })
     } 
 
     const onHandleChange = (e) => {
@@ -51,6 +50,7 @@ const PopUpModal = ({setShowModal}) => {
             [e.target.name] : e.target.value
         })
     }
+
 
     return (
         <div className={`d-flex flex-column ${styles['modal-section']}`}>
@@ -77,7 +77,7 @@ const PopUpModal = ({setShowModal}) => {
                                 type={eachAddress?.type} 
                                 placeholder={eachAddress?.placeholder}
                                 name={eachAddress?.name}
-                                value={addressData?.[eachAddress?.name]}
+                                value={addressData?.[eachAddress?.name] || ""}
                                 onChange={onHandleChange}
                                 className={styles['input-field']}
                             />

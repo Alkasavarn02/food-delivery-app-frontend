@@ -10,17 +10,17 @@ const AddAddress = () => {
     const [userData,setUserData] = useState({})
     const [showModal,setShowModal] = useState(false)
 
+    
+    const onAddAddress = () => {
+        setShowModal(true)
+    }
+    
     useEffect(()=>{
         getUser()
         .then((res)=>{
             setUserData(res?.data?.data)
         })
     },[])
-
-    const onAddAddress = () => {
-        setShowModal(true)
-    }
-
 
     return (
         <div className={`d-flex ${styles['add-address-section']}`}>
@@ -56,7 +56,7 @@ const AddAddress = () => {
             {
                 showModal && 
                 <CustomModal>
-                    <PopUpModal setShowModal={setShowModal}/>
+                    <PopUpModal setShowModal={setShowModal} setUserData={setUserData}/>
                 </CustomModal>
             }
         </div>

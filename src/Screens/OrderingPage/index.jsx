@@ -8,6 +8,9 @@ import AddAddress from "../../Components/AddAdressComponent";
 import OrderConfirmation from "../../Components/OrderConfirmation";
 import ProfilePage from "../../Components/ProfilePage";
 import PaymentUI from "../../Components/PaymentUI";
+import { useContext, useEffect } from "react";
+import { getUser } from "../../services/api";
+import { AppContext } from "../../Context/appcontext";
 
 const screens = {
     'addressPage': <AddAddress/>,
@@ -17,6 +20,7 @@ const screens = {
 }
 
 const OrderingPage = ({screen,title}) => {
+
     return (
         <div className={`d-flex flex-column ${styles['order-page']}`}>
             <div className={`d-flex flex-column ${styles['main-section']}`}>
