@@ -1,0 +1,53 @@
+.card-section {
+    width: 350px;
+}
+
+.notification-count-container{
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.notification-count-img{
+    height: 30px;
+    width: 30px;
+}
+
+.card-main-section{
+    background-color: #F8F8F8;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.order-logo-icon {
+    width: 60px;
+}
+
+.header-section {
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.now-text {
+    color: #8897AD;
+    font-size: 13px;
+}
+
+.order-section {
+    gap: 10px;
+    align-items: center;
+}
+
+.order-progress-text, .order-response-text {
+    font-size: 11px;
+    color: #000;
+}
+
+.order-progress-text {
+    font-weight: 600;
+}
+
+.order-progress-icon {
+    width: 18px;
+    height: 18px;
+}

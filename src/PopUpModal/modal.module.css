@@ -1,0 +1,42 @@
+.input-field,.drop-down-section, .text-area {
+    width: 100%;
+    border: 1px solid #C5C5C580;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    color: color/gray/70;
+    padding: 10px 13px;
+    border-radius: 8px;
+}
+.modal-section{
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+.upper-section {
+    gap: 20px;
+}
+
+.modal-section{
+    width: 800px;
+}
+
+.btn {
+    background-color: #FC8A06;
+    width: 150px;
+    height: 40px;
+}
+
+.btn-section{
+    justify-content: flex-end;
+}
+
+.add-address-img {
+    width: 20px;
+    height: 20px;
+}
+
+.add-address-text{
+    gap: 10px;
+}

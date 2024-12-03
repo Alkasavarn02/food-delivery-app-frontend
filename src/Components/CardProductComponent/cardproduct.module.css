@@ -1,0 +1,8 @@
+.products-grid {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-section > h2 {
+    margin: 15px 0;
+}

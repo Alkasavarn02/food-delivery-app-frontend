@@ -1,0 +1,20 @@
+.para-1{
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.para-2 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (max-width:480px) {
+    .para-1{
+        font-size: 64px;
+    }
+    .para-2{
+        font-size: 24px;
+    }
+}

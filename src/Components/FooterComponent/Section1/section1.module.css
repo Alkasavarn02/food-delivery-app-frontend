@@ -1,0 +1,34 @@
+.section-1 {
+    margin-left: 40px;
+}
+
+.width-285{
+    max-width: 285px;
+    width: 100%;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.footer-order-logo{
+    width: 200px;
+}
+
+.company-text {
+    font-size: 15px;
+    color: #000;
+}
+
+@media screen and (max-width:480px) {
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
+    .company-text {
+        width: 100%;
+        text-align: center;
+    }
+}

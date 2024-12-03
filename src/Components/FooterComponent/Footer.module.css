@@ -1,0 +1,27 @@
+.upper-section {
+    padding: 30px 60px;
+    background-color: #D9D9D9;
+}
+
+.lower-section {
+    padding: 15px;
+    background-color: #03081F;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: space-around;
+}
+
+.section-2-text {
+    gap: 20px;
+}
+
+@media screen and (max-width:480px) {
+    .upper-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section-2-text {
+        display: none;
+    }
+}

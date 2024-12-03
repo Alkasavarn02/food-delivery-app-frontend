@@ -1,0 +1,91 @@
+.text-width{
+    max-width: 425px;
+    width: 100%;
+}
+
+.margin-top-10{
+    margin-top: 10px;
+}
+
+.main-page {
+    width: 100%;
+    font-family: Poppins;
+    overflow-y: auto !important;
+}
+
+.main-page section{
+    padding: 10px;
+}
+
+.main-page section .left-section{
+    width: 50%;
+    padding: 20px;
+}
+
+.main-page section .left-section .order-logo {
+    width: 175px;
+}
+
+.main-page section .left-section .welcome-text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #0C1421;
+    text-align: start;
+}
+
+.main-page section .left-section .headline-text{
+    font-size: 17px;
+    font-weight: 400;
+    color: #313957;
+}
+
+.main-page section .left-section form .input-field {
+    gap: 8px;
+}
+
+.main-page section .left-section .asking-text{
+    font-size: 15px;
+}
+
+.main-page section .left-section .asking-text span {
+    color: #FC8A06
+}
+
+.main-page section .right-section {
+    width: 50%;
+    height: 675px;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.main-page section .right-section img {
+    object-fit:cover;
+}
+
+.btn {
+    padding: 7px;
+    margin-top: 8px;
+    background-color: #FC8A06;
+}
+
+.error{
+    font-size: 13px;
+    font-weight: 400;
+    color: #FF0000;
+    width: 390px;
+}
+
+
+@media screen and (max-width:480px) {
+    .main-page section .right-section {
+        display: none;
+    }
+
+    .main-page section .left-section{
+        width: 100%;
+    }
+
+    .main-page section .left-section .asking-text{
+        font-size: 13px;
+    }
+}

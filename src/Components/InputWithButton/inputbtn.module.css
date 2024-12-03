@@ -1,0 +1,19 @@
+.input-subscribe-container {
+    border-radius: 120px;
+}
+
+.input-subscribe-container input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-family: Poppins;
+}
+
+.subscribe{
+    width: 113px;
+    padding: 5px;
+    font-size: 13px;
+    background-color: #FC8A06;
+}
+

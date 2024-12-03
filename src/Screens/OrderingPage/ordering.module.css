@@ -1,0 +1,24 @@
+.order-page{
+    width: 100%;
+    gap: 20px;
+    font-family: Poppins;
+}
+
+.main-section {
+    gap:30px;
+    padding: 0 35px;
+}
+
+.main-screen-section{
+    gap: 30px;
+}
+
+.backArrowImg{
+    width: 33px;
+    height: 33px;
+}
+
+.title-text{
+    font-size: 25px;
+    font-weight: 600;
+}

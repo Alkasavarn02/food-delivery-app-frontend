@@ -1,0 +1,191 @@
+.image-label-section {
+    width: 100%;
+}
+
+.upper-section {
+    justify-content: space-between;
+}
+
+.right-section {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+}
+
+.mobile-para{
+    display: none;
+}
+
+.desktop-para{
+    display: block;
+}
+
+.left-section {
+    gap: 80px;
+}
+
+.pizzaandfastfood, .frequentquestion{
+    border: 1px solid #FC8A06;
+    padding: 10px 20px;
+    border-radius: 120px;
+}
+
+.img-container{
+    position: relative;
+    width: 100%;
+}
+
+.each-img-section{
+    position: relative;
+}
+
+.text-section {
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.restaurant-class, .restaurant-offer{
+    position: absolute;
+}
+
+.restaurant-class{
+    bottom: 40px;
+    padding: 10px 40px;
+}
+
+.restaurant-offer {
+    bottom: 20px;
+    padding: 10px 30px;
+}
+
+.restaurant-class .type, .restaurant-offer .type{
+    font-size: 18px;
+    font-weight: 500;
+    color: #FC8A06;
+}
+
+.restaurant-class .text, .restaurant-offer .text{
+    font-weight: 700;
+    color: #fff;
+}
+
+.restaurant-class .text{
+    font-size: 20px;
+}
+
+.restaurant-offer .type{
+    margin-bottom: 10px;
+}
+
+.restaurant-offer .text{
+    font-size: 32px;
+}
+
+.food-img-para {
+    padding: 0px 20px;
+}
+
+.food-img-para .type{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.food-img-para .text{
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: #FC8A06;
+}
+
+.company-list {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.chef-img{
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 60px;
+}
+
+.chef-img .type {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FC8A06;
+}
+
+.chef-img .text {
+    font-size: 44px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.get-started-btn{
+    padding: 10px;
+    background-color: #FC8A06;
+    color: #fff;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.image-section {
+    gap: 10px;
+}
+
+
+
+@media screen and (max-width:480px) {
+    .others{
+        display: none;
+    }
+    .mobile-para{
+        display: flex;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .desktop-para{
+        display: none;
+    }
+    .pizzaandfastfood {
+        font-size: 10px;
+        padding: 10px 15px;
+        border: 1px solid #03081F
+    }
+    .right-section{
+        font-size: 14px;
+    }
+    .chef-img{
+        bottom: 30px;
+        padding: 10px 60px;
+    }
+    
+    .chef-img .type {
+        font-size: 18px;
+    }
+    
+    .chef-img .text {
+        font-size: 30px;
+    }
+    .get-started-btn{
+        padding: 6px;
+        width: 163px;
+    }
+    .food-img-para .type{
+        font-size: 15px;
+        color: #fff;
+    }
+    .restaurant-class{
+        padding: 10px;
+        bottom: -3px;
+    }
+    .restaurant-class .type {
+        font-size: 15px;
+    }
+    .restaurant-class .text {
+        font-size: 14px;
+        color: #000;
+    }
+}

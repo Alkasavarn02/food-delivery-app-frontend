@@ -1,0 +1,22 @@
+.legalImportant-text{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #03081F;
+}
+
+.item-text {
+    font-size: 15px;
+    text-decoration-line: underline;
+    margin-bottom: 8px;
+}
+
+.section-3{
+    margin-left: 40px;
+}
+
+@media screen and (max-width:480px) {
+    .section-3 {
+        margin-left: 0px;
+    }
+}

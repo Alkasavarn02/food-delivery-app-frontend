@@ -1,0 +1,473 @@
+.homepage{
+    width: 100%;
+    font-family: Poppins;
+}
+
+.homepage-section {
+    margin: 0 40px;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #00000033;
+    background-color: #FBFBFB;
+    border-radius: 12px;
+    position: relative;
+}
+
+.input-section {
+    border: 1px solid #00000066;
+    background-color: #FFFFFF;
+    max-width: 365px;
+    width: 100%;
+}
+
+.input-section input {
+    color: #000000CC;
+    width: 100%;
+    font-size: 15px;
+}
+
+.left-section {
+    width: 50%;
+    height: 100%;
+}
+
+.left-section-text {
+    width: 480px;
+}
+
+.para-1 {
+    font-size: 13px;
+}
+
+.h1-text-1, .h1-text-2 {
+    font-size: 43px;
+    font-weight: 600;
+}
+
+.h1-text-2 {
+    color: #FC8A06;
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.right-section {
+    width: 60%;
+    justify-content: flex-end;
+    align-items: self-end;
+}
+
+.right-section-div {
+    background-color: #FC8A06;
+    width: 680px;
+    height: 450px;
+    border-radius: 282.5px 0px 12px 0px;
+    position: relative;
+}
+
+.girl-banner-img {
+    position: absolute;
+    height: 420px;
+    bottom: 0;
+    left: 335px;
+}
+
+.girls-with-noodles-img {
+    position: absolute;
+    width: 300px;
+    bottom: -6px;
+    left: -5px;
+} 
+
+.card-position-1, .card-position-2, .card-position-3 {
+    position: absolute;
+}
+
+.card-position-1{
+    left: 160px;
+    top:25px
+}
+
+.card-position-2 {
+    left: 233px;
+    top: 163px;
+}
+
+.card-position-3 {
+    bottom: 35px;
+    left: 185px;
+}
+
+.para-section {
+    position: absolute;
+    bottom: 40px;
+}
+
+.food-img-list {
+    width: 300px;
+    background-color: #F5F5F5;
+    border-radius: 12px;
+}
+
+.company-img-list{
+    background-color: #FC8A06;
+    border-radius: 12px;
+}
+
+.order-app{
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    justify-content: flex-end;
+    padding: 50px;
+    position: relative;
+    margin-top: 30px;
+}
+
+.order-left-section {
+    width: 65%;
+    gap: 15px;
+}
+
+.section-1 {
+    width: 100%;
+}
+
+.section-1 > p {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.icon-section {
+    width: 275px;
+}
+
+.personalised-text {
+    font-family: Poppins;
+    font-size: 50px;
+    font-weight: 500;
+    background-color: #03081F;
+    border-radius: 120px;
+    color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.personalised-text span {
+    color: #FC8A06;
+    text-decoration: underline;
+}
+
+.instruction-text{
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.store-icon {
+    max-width: 400px;
+    width: 100%;
+}
+
+.people-img{
+    position: absolute;
+    width: 600px;
+    bottom: -7px;
+    left: 40px;
+}
+
+.popup, .discount-type {
+    position: absolute;
+    top: 0px;
+    border-radius: 0px 0px 12px 12px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.popup {
+    left: 65px;
+    padding: 17px;
+    background-color: #FFFFFF;
+    color: #03081F;
+}
+
+.discount-type {
+    right: 30px;
+    padding: 20px;
+    background-color: #03081F;
+    color: #fff;
+}
+
+.label-list-class{
+    gap: 40px;
+}
+
+.card-section{
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    padding: 30px;
+    padding: 40px 60px;
+    gap: 30px;
+    width: 100%;
+}
+
+.cards-element-section{
+    padding: 30px;
+}
+
+.food-upper-section{
+    padding: 0px 25px;
+    margin-bottom: 20px;
+}
+
+.cards-section{
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.left-para-section{
+    padding: 30px;
+    width: 800px;
+    text-align: center;
+    color: #03081F;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.left-para-section > p {
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    background-color: #FC8A06;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.card-element {
+    gap: 10px;
+}
+
+.footer-para {
+    text-align: center;
+    padding: 0 80px;
+    font-weight: 400;
+    color: #03081F;
+}
+
+.count-section{
+    background-color: #FC8A06;
+    border-radius: 12px;
+    padding: 30px 80px;
+    color: #FFFFFF;
+    justify-content: space-between;
+}
+
+.card-mobile-header{
+    display: none;
+}
+
+.line {
+    width: 1px;
+    height: 100px;
+    background-color: #D9D9D9;
+}
+
+
+@media screen and (max-width:480px) {
+    .homepage-section{
+        margin: 0px;
+    }
+    .right-section{
+        display: none;
+    }
+    .girl-banner-img{
+        display: none;
+    }
+    .banner-img{
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #03081F;
+        color: #fff;
+    }
+    .left-section {
+        width: 100%;
+    }
+    .left-section-text {
+        width: 100%;
+    }
+    .h1-text-1, .h1-text-2 {
+        font-size: 37px;
+    }
+    .input-section {
+        width: fit-content;
+    }
+    .count-section{
+        flex-direction: column;
+        margin-bottom: 50px;
+        align-items: center;
+        gap: 30px;
+    }
+    .cards-section{
+        flex-direction: column;
+        border-radius: 0px;
+        padding: 0px;
+    }
+    .left-para-section{
+        width: 100%;
+    }
+    .card-label{
+        display: none;
+    }
+    .card-element{
+        flex-direction: column;
+    }
+    .cards-element-section{
+        background-color: #03081F;
+        border-radius: 12px 12px 0px 0px ;
+        padding: 100px;
+    }
+    .card-section{
+        padding: 0px 0px;
+    }
+    .card-mobile-header{
+        display: block;
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .card-btn{
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        padding: 18px;
+        margin-top: 30px;
+    }
+    .left-para-section{
+        font-size: 18px;
+        font-weight: 700;
+        gap: 20px;
+    }
+    .left-para-section > p {
+        margin-bottom: 30px;
+    }
+    .footer-para{
+        color: #fff;
+        padding: 0px;
+        margin-top: 30px;
+    }
+    .popup {
+        left: 65px;
+        padding: 10px;
+        background-color: #FFFFFF;
+        color: #03081F;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 0 0 4px 4px;
+    }
+    .order-app {
+        flex-direction: column;
+        padding: 0px;
+    }
+    .order-left-section {
+        width: 100%;
+    }
+    .personalised-text {
+        font-size: 30px;
+        background:none;
+        padding: 0px;
+    }
+    .instruction-text{
+        font-size: 16px;
+    }
+    .icon-section{
+        width: 150px;
+    }
+    .section-1{
+        margin-top: 50px;
+    }
+    .section-1 > p{
+        font-size: 30px;
+    }
+    .order-left-section{
+        gap: 10px;
+        padding: 20px;
+        height: 665px;
+    }
+    .people-img{
+        width: fit-content;
+        bottom: -5px;
+        left: 3px;
+    }
+    .food-img-list{
+        width: 100%;
+        background-color: #000;
+    }
+    .grid-column {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 25px
+    }
+    .grif-chef {
+        display: grid;
+    }
+    .chef-banner {
+        display: grid;
+    }
+    .chef-img{
+        background-color: t;
+    }
+    .scroll {
+        flex-wrap: nowrap; 
+        overflow-x: auto;
+        white-space: nowrap; 
+        scrollbar-width: thin;
+        gap: 10px;
+    }
+    .img-container{
+        width: 200px;
+    }
+    .discount-type{
+        right: 16px;
+        padding: 5px;
+    }
+    .restaurant-container{
+        width: 190px;
+        height: 200px;
+    }
+    .restaurant-container img {
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .bg-color{
+        background-color: #D9D9D980
+    }
+    .food-each-img{
+        position: none;
+        height: 260px;
+    }
+    .homepage-section{
+        margin: 10px;
+    }
+    .margin-top{
+        margin-top: 20px;
+    }
+    .food-upper-section{
+        padding: 0px;
+    }
+    .line{
+        width: 194px;
+        height: 1px;
+    }
+}

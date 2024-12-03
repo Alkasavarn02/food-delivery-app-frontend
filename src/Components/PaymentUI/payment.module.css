@@ -1,0 +1,138 @@
+.payment-section{
+    width: 100%;
+}
+
+.wallet-text{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.balance-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #83858A;
+
+}
+
+.img-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.forward-arrow{
+    width: 20px;
+    height: 20px;
+}
+
+.payment-container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 20px;
+    border: 1px solid #FFE8CE;
+    border-radius: 120px;
+}
+
+.left-section{
+    width: 60%;
+    gap: 20px;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid #000000
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  background-color: #fffaf5;
+  border: 1px solid #fed7aa;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.radio-option .icon {
+  background-color: #fbbf24;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.radio-option .text {
+  flex: 1;
+}
+
+.radio-option input[type="radio"] {
+  display: none;
+}
+
+.radio-option .custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-option input[type="radio"]:checked + .custom-radio {
+  border-color: #fbbf24;
+}
+
+.radio-option input[type="radio"]:checked + .custom-radio::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fbbf24;
+  border-radius: 50%;
+}
+
+.right-section{
+    width: 40%;
+    justify-content: center;
+}
+.right-section-conatiner {
+    padding: 20px;
+    width: 400px;
+    height: 150px;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    gap: 20px;
+}
+.upper-text {
+    justify-content: space-between;
+}
+
+.payment-btn{
+    background-color: #FC8A06;
+    padding: 10px;
+}
+
+.total-price{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.amount-payed{
+    color: #83858A
+}
+
+
+  

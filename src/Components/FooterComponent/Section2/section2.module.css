@@ -1,0 +1,56 @@
+.section-2 {
+    margin-left: 40px;
+}
+
+.section-2 > p {
+    font-weight: 700;
+    color:#03081F;
+    margin-bottom: 15px;
+}
+
+.section-2 .spam-text{
+    font-size: 12px;
+    padding-left: 20px;
+    font-weight: 400;
+    color: #03081F;
+    margin-bottom: 8px;
+}
+
+.section-2 .spam-text span{
+    text-decoration: underline;
+}
+
+.subscribe-text {
+    background-color: #C9C9C9;
+    height: 38px;
+    margin-bottom: 10px;
+}
+
+.subscribe-text input {
+    max-width: 285px;
+    width: 100%;
+    font-size: 12px;
+    color: #00000099;
+}
+
+.icon-box {
+    gap: 5px;
+}
+
+.icon-img-container {
+    width: 40px;
+}
+
+@media screen and (max-width:480px) {
+    .section-2 {
+        margin-left: 0px;
+    }
+    .section-2 .spam-text{
+        font-size: 12px;
+        padding-left: 0px;
+        text-align: center;
+    }
+    .icon-box {
+        justify-content: center;
+    }
+}

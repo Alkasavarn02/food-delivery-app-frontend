@@ -1,0 +1,12 @@
+.custom-button {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    max-width: 425px;
+    width: 100%;
+    cursor: pointer;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
