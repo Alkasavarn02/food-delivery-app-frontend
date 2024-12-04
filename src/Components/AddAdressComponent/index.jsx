@@ -1,27 +1,17 @@
 import styles from "./address.module.css";
 import plusIcon from "../../assets/plusIcon.png";
-import { useEffect, useState } from "react";
-import { getUser } from "../../services/api";
+import { useState } from "react";
 import CustomModal from "../CustomModal";
 import PopUpModal from "../../PopUpModal";
 
-const AddAddress = () => {
+const AddAddress = ({userInfo=[],setUserInfo}) => {
 
-    const [userData,setUserData] = useState({})
     const [showModal,setShowModal] = useState(false)
-
-    
+   
     const onAddAddress = () => {
         setShowModal(true)
     }
     
-    useEffect(()=>{
-        getUser()
-        .then((res)=>{
-            setUserData(res?.data?.data)
-        })
-    },[])
-
     return (
         <div className={`d-flex ${styles['add-address-section']}`}>
             <div className={`d-flex flex-column justify-center align-center ${styles['add-address-icon']}`}>
@@ -33,7 +23,7 @@ const AddAddress = () => {
                 </p>
             </div>
             {
-                userData?.address?.map((eachAddress,index)=>{
+                userInfo?.address?.map((eachAddress,index)=>{
                     return(
                         <div 
                             className={`d-flex flex-column ${styles['address-section']}`}
@@ -41,7 +31,7 @@ const AddAddress = () => {
                             onClick={(e)=>{console.log(e.target.name)}}
                         >
                             <div className={`d-flex align-center ${styles['header-section']}`}>
-                                <p className={styles['para-1']}>{userData?.userName}</p>
+                                <p className={styles['para-1']}>{userInfo?.userName}</p>
                                 {
                                     index === 0 ? <p className={styles['default-text']}>Default</p> : null
                                 }
@@ -56,7 +46,7 @@ const AddAddress = () => {
             {
                 showModal && 
                 <CustomModal>
-                    <PopUpModal setShowModal={setShowModal} setUserData={setUserData}/>
+                    <PopUpModal userInfo={userInfo} setUserInfo={setUserInfo} setShowModal={setShowModal}/>
                 </CustomModal>
             }
         </div>

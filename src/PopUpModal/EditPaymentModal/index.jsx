@@ -2,8 +2,7 @@ import InputField from "../../Components/InputComponent";
 import styles from "./editPayment.module.css"
 import CustomButton from "../../Components/ButtonComponent";
 
-const EditPaymentMethod = ({setShowModal,setSelectedCard,selectedCard={},setCards,cards=[]}) => {
-
+const EditPaymentMethod = ({setShowModal,setSelectedCard,selectedCard={},setCards=[],onRemove}) => {
 
     const InputFormField = [
         {
@@ -41,18 +40,13 @@ const EditPaymentMethod = ({setShowModal,setSelectedCard,selectedCard={},setCard
     }
 
     const handleSaveChanges = () => {
-            setCards((prevCards) =>
+        setCards((prevCards) =>
             prevCards.map((card) =>
                 card.id === selectedCard.id ? selectedCard : card
             )
-            );
-            setShowModal(false); // Close modal
-      };
-
-    const onRemove = () => {
-        setCards(cards.filter((card)=>card!=selectedCard))
-        setShowModal(false)
-    }
+        );
+        setShowModal(false);
+    };
 
     return (
         <div className={`d-flex flex-column ${styles['edit-payment']}`}>

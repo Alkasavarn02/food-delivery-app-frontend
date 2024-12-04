@@ -1,9 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import styles from "./modal.module.css";
 import CustomButton from "../Components/ButtonComponent";
 import AddAddressIcon from "../assets/AddAddress.png"
 import { addAddress, getUser } from "../services/api";
-import { AppContext } from "../Context/appcontext";
 
 const addAddressInputField = [
     {
@@ -26,9 +25,7 @@ const addAddressInputField = [
     },
 ]
 
-const PopUpModal = ({setShowModal,setUserData}) => {
-
-    const {setUserInfo} = useContext(AppContext)
+const PopUpModal = ({setShowModal, setUserInfo}) => {
 
     const [addressData,setAddressData] = useState({})
 
@@ -40,7 +37,6 @@ const PopUpModal = ({setShowModal,setUserData}) => {
             return getUser()
         })
         .then((res)=>{
-            setUserData(res?.data?.data)
             setUserInfo(res?.data?.data)
         })
         .catch((err)=>{

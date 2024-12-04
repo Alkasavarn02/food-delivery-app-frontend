@@ -28,10 +28,10 @@ const OrderingPage = ({screen,title}) => {
     },[])
 
     const screens = {
-        'addressPage': <AddAddress/>,
-        "OrderConfirmation": <OrderConfirmation/>,
+        'addressPage': <AddAddress userInfo= {userInfo} setUserInfo={setUserInfo}/>,
+        "OrderConfirmation": <OrderConfirmation userInfo={userInfo} setUserInfo={setUserInfo}/>,
         "profilepage":<ProfilePage userInfo={userInfo} setUserInfo={setUserInfo}/>,
-        "payment":<PaymentUI/>
+        "payment":<PaymentUI userInfo = {userInfo} setUserInfo={setUserInfo}/>
     }
 
     return (

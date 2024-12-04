@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import InputField from "../InputComponent";
 import styles from "./profile.module.css";
 import CustomButton from "../ButtonComponent";
@@ -6,8 +6,8 @@ import profileImage from "../../assets/profileimg.png";
 import Line from "../lineComponent";
 import paymentIcon from "../../assets/paymentImg.png";
 import editpencil from "../../assets/editpencil.png";
-import { getUser, updateUserDetails } from "../../services/api";
-import { data, useNavigate } from "react-router-dom";
+import { updateUserDetails } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 import CustomModal from "../CustomModal";
 import EditPaymentMethod from "../../PopUpModal/EditPaymentModal";
 
@@ -38,11 +38,17 @@ const InputTextField = [
     },
 ]
 
-const ProfilePage = ({userInfo,setUserInfo}) => {
+const ProfilePage = ({userInfo={},setUserInfo}) => {
 
     const [formdata,setFormData] = useState({})
     const [isEditing,setIsEditing] = useState(false)
-    const [cards,setCards] = useState()
+
+    const [cards,setCards] = useState([
+        { id: 1, number: "xxxx xxxx xxxx 1234", expiration: "11/26", cvc: "123", name: userInfo?.userName},
+        { id: 2, number: "xxxx xxxx xxxx 6789", expiration: "12/27", cvc: "456", name: userInfo?.userName},
+        { id: 3, number: "xxxx xxxx xxxx 3468", expiration: "01/28", cvc: "789", name: userInfo?.userName},
+    ])
+
     const [selectedCard,setSelectedCard] = useState()
 
     const [modal,setShowModal] = useState(false)
@@ -62,7 +68,6 @@ const ProfilePage = ({userInfo,setUserInfo}) => {
 
     const onSave = (e) => {
         e.preventDefault()
-
         updateUserDetails(formdata)
         .then((res)=>{
             setUserInfo(res?.data?.data)
@@ -75,22 +80,25 @@ const ProfilePage = ({userInfo,setUserInfo}) => {
         })
     }
 
-    useEffect(() => {
-        if (userInfo) {
-          setCards([
-            { id: 1, number: "xxxx xxxx xxxx 1234", expiration: "11/26", cvc: "123", name: userInfo.userName },
-            { id: 2, number: "xxxx xxxx xxxx 6789", expiration: "12/27", cvc: "456", name: userInfo.userName },
-            { id: 3, number: "xxxx xxxx xxxx 3468", expiration: "01/28", cvc: "789", name: userInfo.userName },
-          ]);
-        }
-      }, [userInfo]);
-
-
     const onEditPencil = (card)=>{
         setSelectedCard(card)
         setShowModal(true)
     }
 
+    const onRemove = () => {
+        if (selectedCard) {
+          setCards(cards.filter((card) => card !== selectedCard));
+          setShowModal(false);
+        }
+    }
+
+    useEffect(() => {
+        if (userInfo?.userName) {
+            setCards((prevCards) =>
+                prevCards.map((card) => ({ ...card, name: userInfo?.userName }))
+            );
+        }
+    }, [userInfo])
 
     return (
         <div className={`d-flex flex-column ${styles['profile-page']}`}>
@@ -150,7 +158,7 @@ const ProfilePage = ({userInfo,setUserInfo}) => {
                         setSelectedCard={setSelectedCard}
                         selectedCard={selectedCard}
                         setCards={setCards}
-                        cards={cards}
+                        onRemove={onRemove}
                     />
                 </CustomModal>
             }

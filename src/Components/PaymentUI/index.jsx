@@ -2,14 +2,13 @@ import styles from "./payment.module.css";
 import wallet from "../../assets/Wallet.png";
 import ArrowRight from "../../assets/ArrowRight.png"
 import Line from "../lineComponent";
-import M from "../../assets/M.png"
-import P from "../../assets/P.png"
-import S from "../../assets/S.png"
-import { useContext, useEffect, useState } from "react";
-import { AppContext } from "../../Context/appcontext";
+import M from "../../assets/M.png";
+import P from "../../assets/P.png";
+import S from "../../assets/S.png";
 import CustomButton from "../ButtonComponent";
 import { useNavigate } from "react-router-dom";
 import { getUser } from "../../services/api";
+import { useEffect, useState } from "react";
 
 const img = {
     MasteroKard : M,
@@ -62,11 +61,9 @@ const radioBtn = [
 
 ]
 
-const PaymentUI = () => {
+const PaymentUI = ({userInfo=[],setUserInfo}) => {
 
     const [selected, setSelected] = useState(""); 
-
-    const {userInfo,setUserInfo} = useContext(AppContext);
 
     const navigate = useNavigate()
 

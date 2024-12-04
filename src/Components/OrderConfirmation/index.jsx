@@ -1,29 +1,22 @@
 import styles from "./order.module.css";
 import placedIcon from "../../assets/PlacedIcon.png"
 import CustomButton from "../ButtonComponent";
-import { useContext, useEffect } from "react";
-import { AppContext } from "../../Context/appcontext";
-import { deleteCartItems, getUser } from "../../services/api";
+import { deleteCartItems } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 
-const OrderConfirmation = () => {
-
-    const {userInfo,setUserInfo} = useContext(AppContext);
+const OrderConfirmation = ({userInfo=[],setUserInfo}) => {
 
     const navigate = useNavigate()
-    
-    useEffect(()=>{
-        getUser()
-        .then((res)=>(
-            setUserInfo(res?.data?.data)
-        ))
-    },[])
+
 
     const oncheckOut = ()=>{
         deleteCartItems()
         .then((res)=>{
             setUserInfo(res?.data?.data)
             navigate("/homepage")
+        })
+        .catch((err)=>{
+            alert("something went wrong please try again")
         })
     }
 
