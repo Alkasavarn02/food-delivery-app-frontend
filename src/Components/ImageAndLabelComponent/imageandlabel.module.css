@@ -181,11 +181,18 @@
         padding: 10px;
         bottom: -3px;
     }
-    .restaurant-class .type {
+    .restaurant-class .type,.restaurant-offer .type {
         font-size: 15px;
     }
-    .restaurant-class .text {
+    .restaurant-class .text,.restaurant-offer .text {
         font-size: 14px;
         color: #000;
+    }
+    .restaurant-offer .type {
+        margin-bottom: 0;
+    }
+    .restaurant-offer{
+        bottom: 0px;
+        padding: 9px 4px
     }
 }

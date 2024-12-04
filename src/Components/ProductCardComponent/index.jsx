@@ -5,7 +5,7 @@ import { AppContext } from "../../Context/appcontext";
 
 const ProductCard = ({products, productkey}) => {
 
-    const {userInfo,setUserInfo} = useContext(AppContext)
+    const {setUserInfo} = useContext(AppContext)
 
     const handleClick = (id) => {
         const data = {productId:id}

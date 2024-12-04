@@ -1,0 +1,43 @@
+.location-detail {
+    background-color: #03081FF7;
+    width: 350px;
+    color: #fff;
+    position: absolute;
+    border-radius: 12px;
+    padding: 40px 30px;
+    gap: 20px;
+    top:80px;
+    left: 50px;
+    z-index: 1000;
+}
+
+.heading{
+    font-size: 25px;
+    font-weight: 700;
+    color: #FC8A06;
+    margin-bottom: 10px;
+}
+
+.small-heading,.text{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.text{
+    color: #FC8A06;
+    margin-bottom: 10px;
+}
+
+.address{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:480px) {
+    .location-detail{
+        width: 250px;
+        top:100px;
+        left: 50px;
+        z-index: 1000;
+    }
+}

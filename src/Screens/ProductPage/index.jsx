@@ -26,7 +26,9 @@ import Star from "../../assets/stargroup.png";
 import reviewProfile from "../../assets/reviewProfile.png"
 import beautifyDate from "../../helper";
 import LeftArrow from "../../assets/leftArrow.png";
-import RightArrow from "../../assets/RightArrow.png"
+import RightArrow from "../../assets/RightArrow.png";
+import MapComponent from "../../Components/MapComponent";
+
 
 const navlist = [
     {
@@ -172,7 +174,7 @@ const ProductPage = ({screen}) => {
             <div className={`d-flex flex-column ${styles['section-1']}`}>
                 <Header/>
                 <NavBar screen={screen} userInfo={userInfo}/>
-                <div className={`d-flex ${styles['banner-container']}`}>
+                <div className={`d-flex ${styles['banner-container-1']}`}>
                     <div className={`d-flex flex-column ${styles['banner-left-section']}`}>
                         <p className={styles['para-1']}>I'm lovin' it!</p>
                         <p className={styles['para-2']}>
@@ -208,6 +210,42 @@ const ProductPage = ({screen}) => {
                         <p>Open until 3:00 AM</p>
                     </div>
                 </div>
+                <div className={`d-flex ${styles['banner-container-2']}`}>
+                    <div className={`d-flex align-center justify-center ${styles['banner-right-section']}`}>
+                        <div className={styles['food-img-conatiner']}>
+                            <img src={restaurantType[0]?.Image} alt='food-logo' />
+                        </div>
+                        <div className={styles['rating-div']}>
+                            <img src={rating} alt="rating-icon"/>
+                        </div>
+                    </div>
+                    <div className={`d-flex flex-column ${styles['banner-left-section']}`}>
+                        <p className={styles['para-1']}>I'm lovin' it!</p>
+                        <p className={styles['para-2']}>
+                            {restaurantType?.[0]?.name === "McDonald’s London" ? "Mc Donald's East London" : restaurantType?.[0]?.name}
+                        </p>
+                        <div className={`d-flex align-center ${styles['btn-section']}`}>
+                            <div className={`d-flex align-center ${styles['btn-with-icon']}`}>
+                                <div className={styles['btn-icon']}>
+                                    <img src={OrderCompleted} alt="order-completed" />
+                                </div>
+                                <p>Minimum Order: 12 GBP</p>
+                            </div>
+                            <div className={`d-flex align-center ${styles['btn-with-icon']}`}>
+                                <div className={styles['btn-icon']}>
+                                    <img src={Motorcross} alt="motor-cross" />
+                                </div>
+                                <p>Minimum Order: 12 GBP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`d-flex align-center ${styles['time-section']}`}>
+                        <div className={styles['clock-img']}>
+                            <img src={Clock} alt="time-remainder" />
+                        </div>
+                        <p>Open until 3:00 AM</p>
+                    </div>
+                </div>
                 <div className={`d-flex ${styles['offers-text']}`}>
                     <ImageAndLabel label1={`All Offers from ${restaurantType?.[0]?.name === "McDonald’s London" ? "Mc Donald's East London" : restaurantType?.[0]?.name}`}/>
                     <div className={`d-flex ${styles['search-box']}`}>
@@ -229,8 +267,11 @@ const ProductPage = ({screen}) => {
                 <ImageAndLabel
                     imgList={imgList}
                     popupClasses={`${styles['discount-type']}`}
+                    uppersectionClasses={`${styles['food-upper-section']}`}
+                    scroll={`${styles['scroll']}`}
+                    imgContainer={`${styles['restaurant-container']}`}
+                    classes={`${styles['food-each-img']}`}
                 />
-
                 <div className="d-flex">
                     <div className={`${styles['product-cart-section']}`}>
                         {
@@ -302,6 +343,7 @@ const ProductPage = ({screen}) => {
                         </div>
                     </div>
                 </div>
+                <MapComponent data={restaurantType}/>
             </div>
             <div className={`d-flex flex-column ${styles['section-4']}`}>
                 <div className={`d-flex ${styles['pagination-icon']}`}>

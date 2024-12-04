@@ -9,7 +9,7 @@
     gap: 30px;
 }
 
-.banner-container{
+.banner-container-1{
     width: 100%;
     background-image: url("../../assets/burgerbanner.png");
     background-position: center;
@@ -17,6 +17,10 @@
     padding: 30px;
     border-radius: 12px;
     position: relative;
+}
+
+.banner-container-2 {
+    display: none;
 }
 
 .banner-left-section{
@@ -299,6 +303,11 @@
     gap: 20px;
 }
 
+.food-upper-section{
+    padding: 0px 25px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width:480px) {
     .scroll {
         flex-wrap: nowrap; 
@@ -310,4 +319,84 @@
     .img-container{
         width: 200px;
     }
+    .banner-container-1{
+        display: none;
+    }
+    .banner-container-2{
+        width: 100%;
+        background-image: url("../../assets/burgerbanner.png");
+        background-position: center;
+        background-repeat: none;
+        padding: 20px;
+        border-radius: 12px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner-right-section{
+        width: 100%;
+    }
+    .rating-div{
+        width: 80px;
+        bottom: -16px;
+        left: 0px;           
+    }
+    .banner-left-section{
+        color: #fff;
+        gap: 12px;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0px;
+    }
+    .para-2{
+        font-size: 23px
+    }
+    .section-1, .section-3, .section-5{
+        margin: 0 20px;
+    }
+    .food-img-conatiner{
+        width: 100%;
+    }
+    .btn-section{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .time-section{
+        bottom: -32px;
+    }
+    .additional-details{
+        display: none;
+    }
+    .food-upper-section{
+        padding: 0;
+    }
+    .restaurant-container{
+        width: 190px;
+        height: 200px;
+    }
+    .restaurant-container img {
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .food-each-img{
+        position: none;
+        height: 260px;
+    }
+    .discount-type{
+        right: 16px;
+        padding: 5px;
+        border-radius: 0 0 8px 8px;
+    }
+    .section-2{
+        justify-content: none;
+        gap: 20px;
+        overflow-y: auto;
+        scrollbar-width:hidden
+    }
+    .section-4{
+        overflow-y: auto;
+    }
+    
 }
+
