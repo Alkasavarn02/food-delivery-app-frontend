@@ -25,7 +25,7 @@ import TimeSpan from "../../assets/TimeSpan.png";
 import Star from "../../assets/stargroup.png";
 import reviewProfile from "../../assets/reviewProfile.png"
 import beautifyDate from "../../helper";
-import LeftArrow from "../../assets/LeftArrow.png"
+import LeftArrow from "../../assets/leftArrow.png";
 import RightArrow from "../../assets/RightArrow.png"
 
 const navlist = [
