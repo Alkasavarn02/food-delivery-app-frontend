@@ -16,6 +16,7 @@
 }
 .upper-section {
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .modal-section{

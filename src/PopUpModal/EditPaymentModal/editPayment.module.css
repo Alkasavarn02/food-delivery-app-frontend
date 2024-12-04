@@ -52,3 +52,10 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width:480px) {
+    .save{
+        font-size: 11px;
+        width: 210px;
+    }
+}

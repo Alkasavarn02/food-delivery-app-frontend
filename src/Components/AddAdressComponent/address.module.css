@@ -6,7 +6,8 @@
 }
 
 .add-address-icon, .address-section{
-    width: 265px;
+    min-width: 265px;
+    width: 100%;
     height: 210px;
     border: 2px solid #AFAFAF;
     border-radius: 12px;

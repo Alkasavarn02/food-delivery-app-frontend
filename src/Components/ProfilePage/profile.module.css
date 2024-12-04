@@ -71,3 +71,26 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+@media screen and (max-width:480px) {
+    .profile-page {
+        gap: 20px;
+        padding: 0 px;
+    }
+    .input-profile{
+        flex-direction: column;
+    }
+    .input {
+        width: 100%;
+    }
+    .profile-page{
+        padding: 0px;
+    }
+    .payment-list{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .payment-type{
+        width: 100%;
+    }
+}

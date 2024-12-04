@@ -9,3 +9,9 @@
     top: 0;
     left: 0;
 }
+
+@media screen and (max-width:480px) {
+    .task-modal {
+        padding: 10px;
+    }
+}
