@@ -66,3 +66,8 @@
     width: 18px;
     height: 18px;
 }
+
+.payment-list{
+    flex-wrap: wrap;
+    gap: 10px;
+}

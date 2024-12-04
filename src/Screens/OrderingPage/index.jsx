@@ -12,12 +12,6 @@ import { useContext, useEffect } from "react";
 import { getUser } from "../../services/api";
 import { AppContext } from "../../Context/appcontext";
 
-const screens = {
-    'addressPage': <AddAddress/>,
-    "OrderConfirmation": <OrderConfirmation/>,
-    "profilepage":<ProfilePage/>,
-    "payment":<PaymentUI/>
-}
 
 const OrderingPage = ({screen,title}) => {
 
@@ -32,6 +26,13 @@ const OrderingPage = ({screen,title}) => {
             alert('you have to login first to proceed further')
         })
     },[])
+
+    const screens = {
+        'addressPage': <AddAddress/>,
+        "OrderConfirmation": <OrderConfirmation/>,
+        "profilepage":<ProfilePage userInfo={userInfo} setUserInfo={setUserInfo}/>,
+        "payment":<PaymentUI/>
+    }
 
     return (
         <div className={`d-flex flex-column ${styles['order-page']}`}>
