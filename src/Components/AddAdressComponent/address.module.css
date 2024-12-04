@@ -6,8 +6,7 @@
 }
 
 .add-address-icon, .address-section{
-    min-width: 265px;
-    width: 100%;
+    width: 265px;
     height: 210px;
     border: 2px solid #AFAFAF;
     border-radius: 12px;
@@ -55,4 +54,10 @@
     padding: 5px 20px;
     border-radius: 100px;
     color: #FC8A06;
+}
+
+@media screen and (max-width:480px) {
+    .add-address-icon, .address-section{
+        width: 100%;
+    }
 }
