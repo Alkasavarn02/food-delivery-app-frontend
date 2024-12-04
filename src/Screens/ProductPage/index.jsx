@@ -20,6 +20,11 @@ import IdVerified from "../../assets/IDVerified.png";
 import CategoryComponent from "../../Components/CardProductComponent"
 import Basket from "../../Components/BasketComponent";
 import { AppContext } from "../../Context/appcontext";
+import Line from "../../Components/lineComponent";
+import TimeSpan from "../../assets/TimeSpan.png";
+import Star from "../../assets/stargroup.png";
+import reviewProfile from "../../assets/reviewProfile.png"
+import beautifyDate from "../../helper";
 
 const navlist = [
     {
@@ -277,6 +282,40 @@ const ProductPage = ({screen}) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={`d-flex ${styles['section-4']}`}>
+                {
+                    restaurantType?.[0]?.Customer?.map((eachReview)=>{
+                        return (
+                            <div className={`d-flex flex-column ${styles['customer-review']}`} key={eachReview?._id}>
+                                <div className={`d-flex align-center ${styles['upper-cutomer-details']}`}>
+                                    <div className={`d-flex align-center ${styles['review-right-Section']}`}>
+                                        <div className={styles['profile-img']}>
+                                            <img src={reviewProfile} alt="profile-img" />
+                                        </div>
+                                        <Line classes={styles['review-line']}/>
+                                        <div>
+                                            <p className={styles['reviewr']}>{eachReview?.User?.userName}</p>
+                                            <p className={styles['reviewr-country']}>{eachReview?.User?.country}</p>
+                                        </div>
+                                    </div>
+                                    <div className={`d-flex flex-column ${styles['review-left-Section']}`}>
+                                        <div className={styles['star-img']}>
+                                            <img src={Star} alt="star-img" />
+                                        </div>
+                                        <div className={`d-flex align-center ${styles['Date-section']}`}>
+                                            <div className={styles['clock-img']}>
+                                                <img src={TimeSpan} alt="clock-icon" />
+                                            </div>
+                                            <p>{beautifyDate(eachReview.createdAt.split("T")[0])}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>{eachReview?.reviewText}</p>
+                            </div>
+                        )
+                    })
+                }
             </div>
             <div className={`${styles['section-5']}`}>
                 <ImageAndLabel

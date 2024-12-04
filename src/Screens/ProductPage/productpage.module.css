@@ -219,3 +219,64 @@
     color: #FFFFFF;
 }
 
+.clock-img{
+    width: 20px;
+    height: 20px;
+}
+
+.Date-section{
+    gap: 8px;
+}
+
+.star-img{
+    width: 70px;
+}
+
+.review-left-Section {
+    align-items: end;
+    font-size: 12px;
+}
+
+.review-right-Section {
+    gap: 10px;
+    font-size: 15px;
+}
+
+.profile-img{
+    width: 50px;
+    height: 50px;
+}
+
+.review-line {
+    height: 40px;
+    width: 1px;
+    background-color: #FC8A06;
+}
+
+.section-4{
+    width: 100%;
+    background-color: #D9D9D9;
+    padding:50px
+}
+
+.customer-review{
+    width: 400px;
+    font-size: 13px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px;
+    gap: 10px
+}
+
+.upper-cutomer-details{
+    justify-content: space-between;
+}
+
+.reviewr{
+    font-weight: 600;
+}
+
+.reviewr-country {
+    font-weight: 400;
+    color: #FC8A06;
+}
