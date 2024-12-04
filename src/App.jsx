@@ -16,7 +16,7 @@ function App() {
           <Route path="/register" element={<LoginRegistrationPage screen='register'/>}></Route>
           <Route path="/homepage" element={<Homepage screen="home"/>}></Route>
           <Route path="/productpage/:restaurant" element={<ProductPage screen="restaurant"/>}></Route>
-          <Route path="/checkoutpage" element={<OrderingPage/>}></Route>
+          <Route path="/checkoutpage" element={<OrderingPage title="Checkout"/>}></Route>
           <Route path="/addresspage" element={<OrderingPage screen="addressPage" title="Your Order Details"/>}></Route>
           <Route path="/orderconfirmation" element={<OrderingPage screen="OrderConfirmation"/>}></Route>
           <Route path="/profilepage" element={<OrderingPage screen="profilepage" title="My Profile"/>}></Route>

@@ -98,3 +98,29 @@
 .food-upper-section{
     margin-bottom: 20px;
 }
+
+
+@media screen and (max-width:480px){
+    .section-1{
+        flex-direction: column;
+    }
+    .left-section{
+        width: 100%;
+    }
+    .delivery-left-section{
+        flex-direction: row;
+    }
+    .right-section{
+        width: 100%;
+    }
+    .scroll{
+        flex-wrap: nowrap; 
+        overflow-x: auto;
+        white-space: nowrap; 
+        scrollbar-width: thin;
+        gap: 10px;
+    }
+    .img-container{
+        width: 200px;
+    }
+}
