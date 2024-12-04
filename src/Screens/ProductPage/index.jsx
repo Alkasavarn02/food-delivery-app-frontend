@@ -354,8 +354,8 @@ const ProductPage = ({screen}) => {
                     imgList={CompanyImg}
                     classes={`${styles['company-img-list']}`}
                     uppersectionClasses={`${styles['food-upper-section']}`}
-                    // scroll={`${styles['scroll']}`}
-                    // imgContainer={`${styles['img-container']}`}
+                    scroll={`${styles['scroll']}`}
+                    imgContainer={`${styles['img-container']}`}
                 />
             </div>
             <Footer/>

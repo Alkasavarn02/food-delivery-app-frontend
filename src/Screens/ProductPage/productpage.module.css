@@ -300,5 +300,14 @@
 }
 
 @media screen and (max-width:480px) {
-    
+    .scroll {
+        flex-wrap: nowrap; 
+        overflow-x: auto;
+        white-space: nowrap; 
+        scrollbar-width: thin;
+        gap: 10px;
+    }
+    .img-container{
+        width: 200px;
+    }
 }

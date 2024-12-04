@@ -134,5 +134,19 @@
     color: #83858A
 }
 
+@media screen and (max-width:480px){
+    .payment-section{
+        flex-direction: column;
+        gap:30px
+    }
+    .left-section{
+        width: 100%;
+    }
+    .right-section{
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
 
   
