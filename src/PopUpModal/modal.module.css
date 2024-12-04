@@ -16,7 +16,6 @@
 }
 .upper-section {
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .modal-section{
@@ -40,4 +39,10 @@
 
 .add-address-text{
     gap: 10px;
+}
+
+@media screen and (max-width:480px) {
+    .upper-section{
+        flex-wrap: wrap;
+    }
 }
